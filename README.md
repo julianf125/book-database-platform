@@ -5,4 +5,4 @@ As an avid reader, I like to maintain a database of the books I want to read, as
 
 ## Usage
 This program is intended to be run from the command line. One of 3 flags can be passed, with each triggering the execution of a different function:
-* **--fetch_new**:
+* **--get_new**:  This flag executes the check_and_fetch_ids() function. This function examines the database, identifying all titles for which the data in the database is incomplete. It then uses these incomplete titles to perform a search on Goodreads. The top result of each search is identified as the most likely match for a given title, and the corresponding metadata is scraped from Goodreads and written to the Notion database. Titles with already-complete entries in Notion remain unmodified.
